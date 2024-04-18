@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>django1 - index</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+
+</head>
+<body><center>
+    <h1>Django 1 - index</h1>
+    <img src="{% static 'imagem/logo.png' %}" alt="">
+    <h2>{{ curso }}</h2>
+    <h3>{{ outro }}</h3>
+
+        <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Estoque</th>  <!-- Corrigido para 'Email' -->
+            </tr>
+         </thead>
+        <tbody>
+            {% for produto in produtos %}
+            <tr>
+                <td><a href="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>  <!-- Acessando atributo 'nome' -->
+                <td>{{ produto.preco }}</td>  <!-- Acessando atributo 'sobrenome' -->
+                <td>{{ produto.estoque }}</td>  <!-- Acessando atributo 'email' -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button onclick="teste()">Clique-me</button>
+
+<script type="text/javascript" src="{% static 'js/teste.js' %}"></script>
+</center>
+</body>
+</html>

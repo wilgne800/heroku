@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Produto</title>
+<link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+    <h1>Produto</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Estoque</th>  <!-- Corrigido para 'Email' -->
+            </tr>
+         </thead>
+        <tbody>
+            <tr>
+                <td>{{ produto.nome }}</td>  <!-- Acessando atributo 'nome' -->
+                <td>{{ produto.preco }}</td>  <!-- Acessando atributo 'sobrenome' -->
+                <td>{{ produto.estoque }}</td>  <!-- Acessando atributo 'email' -->
+            </tr>
+        </tbody>
+    </table>
+<h2>VOLTAR...</h2>
+</body>
+</html>

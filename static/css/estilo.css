@@ -1,0 +1,17 @@
+body{
+    align-items: center;
+    background-color: blueviolet;
+    color: aliceblue;
+}
+a{
+    text-decoration-color: aliceblue;
+    color: antiquewhite;
+}
+img{
+    width: 250px;
+    height: 150px;
+}
+button{
+    color: darkgreen;
+    background-color: aqua;
+}
